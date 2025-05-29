@@ -1,7 +1,8 @@
 "use client";
+import { useUpload } from "@/utilities/runtime-helpers";
 import React from "react";
-
-import { useUpload } from "../utilities/runtime-helpers";
+import { useEffect, useState } from "react";
+import Button from "@/components/button"; // Adjust path if needed
 
 function MainComponent() {
   const [albums, setAlbums] = useState([]);

@@ -1,8 +1,17 @@
 "use client";
-import React, { useState } from "react";
+
+import { useState, useEffect } from "react";
 
 function MainComponent() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [currentPath, setCurrentPath] = useState("");
+
+  useEffect(() => {
+    // Set current path only on client side
+    if (typeof window !== "undefined") {
+      setCurrentPath(window.location.pathname);
+    }
+  }, []);
 
   const menuItems = [
     {
@@ -77,7 +86,7 @@ function MainComponent() {
               key={item.id}
               href={item.path}
               className={`flex items-center space-x-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-colors ${
-                window.location.pathname === item.path
+                currentPath === item.path
                   ? "bg-gray-100 text-[#357AFF]"
                   : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
               }`}

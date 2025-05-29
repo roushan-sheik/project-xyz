@@ -1,7 +1,6 @@
 "use client";
+import { useUpload } from "@/utilities/runtime-helpers";
 import React, { useEffect, useState } from "react";
-
-import { useUpload } from "../utilities/runtime-helpers";
 
 function MainComponent() {
   const [activeTab, setActiveTab] = useState("form");

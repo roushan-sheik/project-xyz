@@ -1,7 +1,6 @@
 "use client";
-import React from "react";
-
-import { useUpload } from "../utilities/runtime-helpers";
+import { useUpload } from "@/utilities/runtime-helpers";
+import React, { useEffect, useState } from "react";
 
 function MainComponent() {
   const [images, setImages] = useState([]);

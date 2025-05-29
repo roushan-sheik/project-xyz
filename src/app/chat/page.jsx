@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import Button from "@/components/button"; // Adjust path if needed
 
 function MainComponent() {
   const [rooms, setRooms] = useState([]);

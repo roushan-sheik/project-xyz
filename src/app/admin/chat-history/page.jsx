@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Button } from "@/components/button";
 
 function MainComponent() {
   const [chatRooms, setChatRooms] = useState([]);
